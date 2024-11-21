@@ -7,3 +7,5 @@ Para criar e testar o modelo, rodar "notebook.ipynb". O arquivo utilizado no app
 O aplicativo é rodado na Streamlit Cloud, o link a seguir:
 
 link: https://kuo3fe7hsxdphyzivtjhdz.streamlit.app/
+
+yt: https://youtu.be/ODSrRrEMbiA
