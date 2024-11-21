@@ -12,6 +12,9 @@ with open('book_classifier_model.pkl', 'rb') as model_file:
 with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
     vectorizer = pickle.load(vectorizer_file)
 
+with open("encoder.pkl", "rb") as encoder_file:
+    encoder = pickle.load(encoder_file)
+
 # Function to predict genre based on description
 def predict_genre(description):
     description_vectorized = vectorizer.transform([description])
@@ -27,7 +30,7 @@ description = st.text_area("Descrição do Livro:")
 
 if st.button('Classificar'):
     if description:
-        genre = predict_genre(description)
+        genre = encoder..inverse_transform([predict_genre(description)])[0]
         st.write(f"O gênero do livro é: {genre}")
     else:
         st.write("Por favor, insira uma descrição.")
