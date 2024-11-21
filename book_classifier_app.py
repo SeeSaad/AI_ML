@@ -30,7 +30,7 @@ description = st.text_area("Descrição do Livro:")
 
 if st.button('Classificar'):
     if description:
-        genre = encoder..inverse_transform([predict_genre(description)])[0]
+        genre = encoder.inverse_transform([predict_genre(description)])[0]
         st.write(f"O gênero do livro é: {genre}")
     else:
         st.write("Por favor, insira uma descrição.")
